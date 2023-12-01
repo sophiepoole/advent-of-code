@@ -1,8 +1,9 @@
+import java.io.File
 import kotlin.io.path.Path
 import kotlin.io.path.readLines
 
 internal object Input {
-    fun asList(name: String) = Path("resources/$name.txt").readLines()
+    fun asList(name: String) = File("src/main/resources", name).readLines()
 }
 
 /**
